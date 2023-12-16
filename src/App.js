@@ -3,11 +3,11 @@ import "./App.css";
 import SearchIcon from "./search.svg";
 import MovieCard from "./MovieCard";
 import { Link } from "react-router-dom";
-import { API_URL } from "./config";
+
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-
+  const API_URL = "http://www.omdbapi.com/?i=tt3896198&apikey=44a329d0";
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
