@@ -9,16 +9,16 @@ const MovieCard = ({ movie }) => {
       <div>
         <img
           src={
-            movie.Poster !== "N/A"
-              ? movie.Poster
+            movie.poster_path
+              ? `https://image.tmdb.org/t/p/w300_and_h450_bestv2${movie.poster_path}`
               : "https://via.placeholder.com/400"
           }
-          alt={movie.Title}
+          alt={movie.title}
         />
       </div>
       <div>
-        <span>{movie.Type}</span>
-        <h3>{movie.Title}</h3>
+        <span>{movie.vote_average+"/10"}</span>
+        <h3>{movie.title}</h3>
       </div>
     </div>
   );

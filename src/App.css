@@ -229,3 +229,7 @@ h1 {
     margin: 1rem;
   }
 }
+
+.cursor{
+  cursor: pointer;
+}
